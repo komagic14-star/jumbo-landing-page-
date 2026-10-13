@@ -6,7 +6,7 @@ A concept landing page for a fictional large-file transfer SaaS, built with plai
 
 **Live demo:** _add your link here_
 
-![Jumbo hero section](screenshot.png)
+<img width="1919" height="928" alt="screenshot" src="https://github.com/user-attachments/assets/fbd7db09-9264-4c23-aa38-299bdf3e0057" />
 
 ## Features
 
