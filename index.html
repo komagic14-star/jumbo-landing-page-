@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="dark" />
+    <script>
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
+        document.documentElement.classList.add("js");
+    </script>
+    <title>Jumbo</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="wrap">
+        <a class="logo" href="#top"><i></i>Jumbo</a>
+        <nav aria-label="Main">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a class="btn solid" href="#pricing">Start free</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <canvas id="dots" aria-hidden="true"></canvas>
+        <div class="wrap">
+          <div>
+            <h1>Send files of any size.</h1>
+            <p class="lead">
+              Jumbo moves video, design and data files up to 2 TB with one link.
+              No zipping, no email limits, no waiting by the progress bar.
+            </p>
+            <div class="actions">
+              <a class="btn solid" href="#pricing">Start free</a>
+              <a class="btn ghost" href="#features">See how it works</a>
+            </div>
+          </div>
+
+          <div class="transfer" aria-label="Live transfer demo">
+            <h3>season-finale-4k.mov</h3>
+            <div class="meta">
+              <span>48.2 GB</span><span id="state">Sending</span>
+            </div>
+            <div
+              class="track"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              id="bar"
+            >
+              <i id="fill"></i>
+            </div>
+            <div class="stats">
+              <div><b id="sent">0.0</b><span>GB sent</span></div>
+              <div><b id="speed">0</b><span>Gbps</span></div>
+              <div><b id="eta">6s</b><span>left</span></div>
+            </div>
+            <div class="done" id="done" hidden>
+              <span>jumbo.to/x7k2q</span>
+              <button type="button" id="replay">Send again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <div data-reveal>
+            <b data-count="2" data-suffix=" TB">2 TB</b
+            ><span>max file size</span>
+          </div>
+          <div data-reveal>
+            <b data-count="140" data-suffix="+">140+</b
+            ><span>countries reached</span>
+          </div>
+          <div data-reveal>
+            <b data-count="12" data-suffix="M">12M</b
+            ><span>transfers a month</span>
+          </div>
+          <div data-reveal>
+            <b data-count="99.9" data-decimals="1" data-suffix="%">99.9%</b
+            ><span>uptime</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="features">
+        <div class="wrap">
+          <h2>Built for files that make other tools give up.</h2>
+          <div class="feature-list">
+            <div class="feature">
+              <h3>Resumable by default</h3>
+              <p>
+                Lose Wi-Fi mid-upload and Jumbo picks up at the exact byte.
+                Close the laptop, board the plane, finish later.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Links that expire</h3>
+              <p>
+                Set a date, a download limit or a password. When the deadline
+                hits, the file is gone from our servers.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Preview before download</h3>
+              <p>
+                Recipients scrub through video, flip through PDFs and browse
+                folders in the browser before they save a thing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing" id="pricing">
+        <div class="wrap">
+          <div class="head">
+            <h2>Pay for space, not for seats.</h2>
+            <div class="switch" role="group" aria-label="Billing period">
+              <button type="button" data-period="month" aria-pressed="true">
+                Monthly
+              </button>
+              <button type="button" data-period="year" aria-pressed="false">
+                Yearly, save 25%
+              </button>
+            </div>
+          </div>
+          <div class="plans">
+            <article class="plan">
+              <h3>Free</h3>
+              <div class="price">$0</div>
+              <ul>
+                <li>5 GB per transfer</li>
+                <li>7-day links</li>
+                <li>Basic previews</li>
+              </ul>
+              <a class="btn ghost" href="#top">Start free</a>
+            </article>
+            <article class="plan pop">
+              <h3>Pro</h3>
+              <div class="price">
+                $<span data-month="12" data-year="9">12</span
+                ><small> /month</small>
+              </div>
+              <ul>
+                <li>200 GB per transfer</li>
+                <li>Custom expiry and passwords</li>
+                <li>Resumable uploads</li>
+              </ul>
+              <a class="btn solid" href="#top">Get Pro</a>
+            </article>
+            <article class="plan">
+              <h3>Team</h3>
+              <div class="price">
+                $<span data-month="39" data-year="29">39</span
+                ><small> /month</small>
+              </div>
+              <ul>
+                <li>2 TB per transfer</li>
+                <li>Unlimited teammates</li>
+                <li>Shared branded portal</li>
+              </ul>
+              <a class="btn ghost" href="#top">Get Team</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="wrap">
+          <h2>Questions, answered.</h2>
+          <details>
+            <summary>How big can a single file be?</summary>
+            <p>
+              Free accounts send up to 5 GB, Pro up to 200 GB and Team up to 2
+              TB per transfer.
+            </p>
+          </details>
+          <details>
+            <summary>Do recipients need an account?</summary>
+            <p>
+              No. They open the link, preview the files and download. That is
+              all.
+            </p>
+          </details>
+          <details>
+            <summary>What happens when a link expires?</summary>
+            <p>
+              The files are deleted from our servers, and the link shows a
+              notice that the transfer has ended.
+            </p>
+          </details>
+          <details>
+            <summary>Can I cancel any time?</summary>
+            <p>
+              Yes. Downgrade or cancel from your account page, and you keep
+              access until the period you paid for ends.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section cta">
+        <div class="wrap">
+          <h2>Your biggest file is a link away.</h2>
+          <a class="btn" href="#top">Start free</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>&copy; 2026 Jumbo Transfer, Inc.</span>
+        <span
+          ><a href="#features">Features</a><a href="#pricing">Pricing</a
+          ><a href="#faq">FAQ</a></span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
